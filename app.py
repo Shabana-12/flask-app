@@ -13,7 +13,7 @@ app.secret_key = 'your secret key'
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'pass@1New'
+app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'logindata'
 
 mysql = MySQL(app)
@@ -72,7 +72,7 @@ def register():
 			msg = 'You have successfully registered !'
    	
 	elif request.method == 'POST':
-		msg = 'You have successfully registered !'
+		msg = 'Please fill out the form !'
 	return render_template('register.html', msg = msg)
 
 if __name__ == '__main__':
