@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Profile </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+</head>
+
+<body bgcolor="pink"></br></br></br>
+    <div>
+        <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+        <a href="{{ url_for('back') }}" class="btn">Go Back</a>
+    </div>
+    
+    <div align="center">
+         
+        <div align="center" class="border">
+            <div class="header">
+                
+                <h1 class="word">Profile Details</h1>
+                <div>
+                    <h2>Your account details are below:</h2>
+                    <table>
+                        <tr>
+                            <td>UserName:</td>
+                            <td>{{ account['username'] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Email Address:</td>
+                            <td>{{ account['email'] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td>{{ account['password'] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Number:</td>
+                            <td>{{ account['mobilenumber'] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Gender:</td>
+                            <td>{{ account['gender'] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth:</td>
+                            <td>{{ account['date'] }}</td>
+                        </tr>
+                    </table>
+                    
+                </div>
+                    
+            </div>
+
+        </div>
+          
+    </div>
+    
+
+</body>
+
+</html>
